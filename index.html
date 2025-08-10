@@ -43,3 +43,75 @@
   .horizontal-arrow {
     width: 40px;
     height: 20px;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 50%;
+    right: -40px;
+    margin-top: -10px;
+  }
+  .side-box {
+    position: relative;
+    background: #27ae60;
+    width: 200px;
+    margin-left: 350px;
+    margin-top: -80px;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .side-arrow {
+    width: 40px;
+    height: 20px;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    transform: rotate(-45deg);
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    margin-top: -10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="flowchart">
+  <div class="box">Start</div>
+  <div class="arrow"></div>
+
+  <div class="box">Load HTML &amp; CSS</div>
+  <div class="arrow"></div>
+
+  <div class="box">Display 5 color boxes</div>
+  <div class="arrow"></div>
+
+  <div class="decision">User clicks a color box?</div>
+
+  <!-- No branch -->
+  <div class="side-box" style="top: 0;">
+    Wait for user action
+    <div class="side-arrow"></div>
+  </div>
+
+  <div class="arrow"></div>
+
+  <!-- Yes branch -->
+  <div class="box" style="margin-top: 50px;">Call pickColor(color)</div>
+  <div class="arrow"></div>
+
+  <div class="box">Update #selected-color text with chosen color</div>
+  <div class="arrow"></div>
+
+  <div class="box">Change background color of page to chosen color</div>
+  <div class="arrow"></div>
+
+  <div class="box">Wait for next user click</div>
+  <div class="arrow"></div>
+
+  <div class="box">User clicks a color box?</div>
+</div>
+
+</body>
+</html>
